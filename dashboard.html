@@ -94,7 +94,7 @@ T=t;
 const b=document.getElementById('lb');
 b.disabled=true;b.textContent='جاري التحقق...';
 try{
-const d=await api('business');
+const d=await api('orders');
 if(d.message?.includes('Unauthenticated')||d.error)throw new Error('الرمز غير صحيح');
 document.getElementById('L').style.display='none';
 document.getElementById('D').style.display='block';
